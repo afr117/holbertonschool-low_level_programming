@@ -1,2 +1,2 @@
 #!/bin/bash
-int main(void){return puts("Programming is like building a multilingual puzzle,\n"),0;}
+echo '#include <stdio.h>' > main.c && echo 'int main(void) { puts("Programming is like building a multilingual puzzle,"); return 0; }' >> main.c && gcc main.c -o cisfun
