@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE="0-main.c"; gcc -E "$CFILE" | cat -n > preprocessor_output.txt
+gcc -E "$CFILE" -o c
