@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE="your_c_file.c"; gcc -E "$CFILE" -o "c" -Wall -Werror -Wextra -pedantic -std=gnu89 > preprocessor_output.txt
+CFILE="0-main.c"; gcc -E "$CFILE" | cat -n > preprocessor_output.txt
