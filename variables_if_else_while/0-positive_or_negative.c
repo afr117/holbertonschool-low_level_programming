@@ -12,9 +12,9 @@ int main(void)
 	int n;
 
 	srand(time(0));
-	n = rand(0) % 201 - 100; /* Generate a random number between 0 and 100 */
+	n = rand() % 201 - 100; /* Generate a random number between 0 and 100 */
 
-	printf(" %d is ", n);
+	printf("%d is ", n);
 	if (n > 0)
 	{
 		printf("positive\n");
