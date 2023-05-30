@@ -12,7 +12,7 @@ int main(void)
 	int n;
 
 	srand(time(0));
-	n = rand() % 201 - 100; /* Generate a random number between -100 and 100 */
+	n = rand() % 201 - 100; /* Generate a random number between 0 and 100 */
 
 	printf("The number %d is ", n);
 	if (n > 0)
