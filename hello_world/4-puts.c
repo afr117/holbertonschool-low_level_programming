@@ -1,1 +1,7 @@
-#include <stdio.h> int main(void) { return puts("Programming is like building a multilingual puzzle") == EOF; } i
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ *
+ */
