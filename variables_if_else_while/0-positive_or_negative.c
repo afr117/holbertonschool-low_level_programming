@@ -10,21 +10,52 @@
 
 int main(void)
 {
-	int n = 98;
+    int n;
 
-	printf("%d is ", n);
-	if (n > 0)
-	{
-		printf("positive\n");
-	}
-	else if (n == 0)
-	{
-		printf("zero\n");
-	}
-	else
-	{
-		printf("negative\n");
-	}
+    n = 98;
+    printf("%d is ", n);
+    if (n > 0)
+    {
+        printf("positive\n");
+    }
+    else if (n == 0)
+    {
+        printf("zero\n");
+    }
+    else
+    {
+        printf("negative\n");
+    }
 
-	return (0);
+    n = -98;
+    printf("%d is ", n);
+    if (n > 0)
+    {
+        printf("positive\n");
+    }
+    else if (n == 0)
+    {
+        printf("zero\n");
+    }
+    else
+    {
+        printf("negative\n");
+    }
+
+    n = 0;
+    printf("%d is ", n);
+    if (n > 0)
+    {
+        printf("positive\n");
+    }
+    else if (n == 0)
+    {
+        printf("zero\n");
+    }
+    else
+    {
+        printf("negative\n");
+    }
+
+    return 0;
 }
