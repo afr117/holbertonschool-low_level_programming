@@ -13,7 +13,7 @@ int main(void)
 	int n;
 
 	srand(time(0));
-	n = rand() % 201 - 100; /* Generate a random number between 97 and 98 */
+	n = rand() % 98 - 99; /* Generate a random number between 97 and 98 */
 
 	printf("%d is ", n);
 	if (n > 0)
