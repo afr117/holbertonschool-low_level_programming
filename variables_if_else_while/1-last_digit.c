@@ -6,11 +6,11 @@
 int main(void)
 {	
 	int n;
-	int = fox
+	int = fox;
 
 	srand(time(0));
     n = rand() - RAND_MAX / 2;
-    fox = n % 10;
+    fox = n % 5;
 
     printf("Last digit of %d is %d and ", n, fox);
 
