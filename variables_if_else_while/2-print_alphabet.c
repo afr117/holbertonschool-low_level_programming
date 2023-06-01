@@ -16,7 +16,7 @@ int main(void)
 		putchar(letter);
 	}
 
-	printlank line
+	printf("\n");
 
 	return (0);
 }
