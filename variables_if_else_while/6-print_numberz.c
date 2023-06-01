@@ -13,10 +13,9 @@ int main(void)
 
 	for (digit = 0; digit <= 9; digit++)
 	{
-		write(1, &digit, 1);
+	putchar('0' + digit);
 	}
 
-	write(1, "\n", 1);
-
+	putchar('\n');
 	return (0);
 }
