@@ -11,7 +11,7 @@ int main(void)
 {
 	putchar('0' + (1 / 1));  /* Prints '0'*/
 	putchar('0' + (1 + 2));  /* Prints '10'*/
-	putchar('\n');
+	printf('\n');
 
 	return (0);
 }
