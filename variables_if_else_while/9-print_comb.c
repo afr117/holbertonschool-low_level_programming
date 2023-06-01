@@ -15,10 +15,16 @@ int main(void)
 
 	for (digit = 0; digit <= 9; digit++)
 	{
+
 	putchar('0' + digit);
-	}
+	if (digit != 9)
+	{
 
 	putchar(',');
+	putchar(' ');
+
+	}
+	}
 
 	putchar('\n');
 
