@@ -9,9 +9,8 @@
  */
 int main(void)
 {
-	putchar(48);  /* ASCII value of '0' */
-	putchar(49);  /* ASCII value of '1' */
-	write(1, "\n", 1);
+	putchar('0' + 0);
+	write(1, "123456789\n", 10);
 
 	return (0);
 }
