@@ -9,8 +9,14 @@
  */
 int main(void)
 {
-	putchar('0' + 0);
-	fwrite(1, "123456789\n", 10);
+	char digit;
+    
+	for (digit = '0'; digit <= '9'; digit++)
+	{
+		putchar(digit);
+	}
 
-	return (0);
+	putchar('\n');
+
+	return 0;
 }
