@@ -7,8 +7,6 @@
  *
  * Return: Always 0 (Success)
  */
-int putchar(int c);
-
 int main(void)
 {
 	int digit;
