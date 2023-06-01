@@ -10,7 +10,7 @@
 int main(void)
 {
 	putchar('0' + 0);
-	write(1, "123456789\n", 10);
+	fwrite(1, "123456789\n", 10);
 
 	return (0);
 }
