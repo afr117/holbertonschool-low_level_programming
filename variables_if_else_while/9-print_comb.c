@@ -18,6 +18,8 @@ int main(void)
 	putchar('0' + digit);
 	}
 
+	putchar(',');
+
 	putchar('\n');
 
 	return (0);
