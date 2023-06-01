@@ -9,9 +9,9 @@
  */
 int main(void)
 {
-	putchar('0' + (1 / 1));  /* Prints '0'*/
-	putchar('0' + (1 + 2));  /* Prints '10'*/
-	printf("\n");
+	putchar(48);  /* ASCII value of '0' */
+	putchar(49);  /* ASCII value of '1' */
+	write(1, "\n", 1);
 
 	return (0);
 }
