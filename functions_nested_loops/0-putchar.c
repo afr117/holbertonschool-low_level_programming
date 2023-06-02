@@ -1,13 +1,13 @@
-#include <main.h>
-#include <unistd.h>
-#include <stdio.h>
+#include "main.h"
+
 /**
  * main - Entry point of the program
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
-	{
+{
 		_putchar('_');
 		_putchar('p');
 		_putchar('u');
@@ -16,6 +16,7 @@ int main(void)
 		_putchar('h');
 		_putchar('a');
 		_putchar('r');
-		_putchar('/h');
+		_putchar('/');
+		_putchar('h');
 		return (0);
 }
