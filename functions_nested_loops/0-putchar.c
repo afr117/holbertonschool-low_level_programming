@@ -11,5 +11,5 @@ int main(void)
 		char a = 1;
 	if (a == 1)
 		printf("_putchar\n");
-	return(0);
+	return (0);
 }
