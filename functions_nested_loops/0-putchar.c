@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <main.h>
 #include <unistd.h>
 #include <stdio.h>
 /**
@@ -8,8 +8,14 @@
  */
 int main(void)
 	{
-		char a = 1;
-	if (a == 1)
-		printf("_putchar\n");
-	return (0);
+		_putchar('_');
+		_putchar('p');
+		_putchar('u');
+		_putchar('t');
+		_putchar('c');
+		_putchar('h');
+		_putchar('a');
+		_putchar('r');
+		_putchar('/h');
+		return (0);
 }
