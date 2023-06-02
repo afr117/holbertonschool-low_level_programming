@@ -1,19 +1,23 @@
-#include <stdlib.h>
-#include <unistd.h>
 #include <stdio.h>
-
+#include <unistd.h>
 /**
  * main - Entry point of the program
  *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
-void print_alphabet(void);
 int _putchar(char c);
+
+void print_alphabet(void);
 
 int main(void)
 {
 	print_alphabet();
 	return (0);
+}
+
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
 
 void print_alphabet(void)
@@ -25,5 +29,5 @@ void print_alphabet(void)
 		_putchar(letter);
 	}
 
-	_putchar('\n');
+		_putchar('\n');
 }
