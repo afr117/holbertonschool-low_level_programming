@@ -8,6 +8,7 @@
 
 int _islower(int c)
 {
+	/* Implementation of the function */
 	if (c >= 97 && c <= 122)
 	{
 
