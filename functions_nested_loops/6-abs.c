@@ -2,7 +2,11 @@
 #include "5-sign.c"
 
 /**
- * This function computes the absolute value of an integer.
+ * _abs - Compute the absolute value of an integer.
+ *
+ * @num: The input integer.
+ *
+ * Return: The absolute value of @num.
  */
 
 int _abs(int num)
