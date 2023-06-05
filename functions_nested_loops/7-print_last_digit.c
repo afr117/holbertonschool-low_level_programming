@@ -5,19 +5,14 @@
    Function: print_last_digit
 
    Description:
-      This function takes an integer 'num' as input and calculates the last digit of the number.
-      It then prints the last digit using the _putchar function.
-      If the last digit is negative, it converts it to a positive value before printing.
-      Finally, it returns the calculated last digit.
+      This function takes an integer 'num' as input and returns its last digit.
+      The function also prints the last digit.
 
    Parameters:
-      - num: The integer number for which the last digit needs to be calculated and printed.
+      - num: An integer number from which the last digit needs to be extracted.
 
    Returns:
       The last digit of the input number 'num'.
-
-   Warning:
-      The '_putchar' function used for printing may need to be replaced with an appropriate output function.
 */
 int print_last_digit(int num)
 {
