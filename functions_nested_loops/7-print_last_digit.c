@@ -3,16 +3,13 @@
 
 /**
  * print_last_digit - Prints the last digit of a number and returns its value.
- *
  * @num: The input number.
- *
  * Return: The value of the last digit.
- *
  * Get the last digit using the modulus operator
  */
-int main()
+int print_last_digit(int num)
 {
-        int number = 12345;
-        print_last_digit(number);
-        return (0);
+	int last_digit = num % 10;
+	printf("The last digit is: %d\n", last_digit);
+	return last_digit;
 }
