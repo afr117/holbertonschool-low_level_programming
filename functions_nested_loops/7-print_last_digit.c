@@ -6,7 +6,7 @@
  *
  * @num: An integer number.
  *
- * Return - The last digit of the input number.
+ * Return: The last digit of the input number.
  */
 int print_last_digit(int num)
 {
