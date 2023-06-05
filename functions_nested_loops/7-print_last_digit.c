@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * Function: print_last_digit
+ * Print_last_digit
  *
  * Returns the last digit of an input number.
  *
@@ -10,7 +10,7 @@
  *
  * Returns:
  *
- * The last digit of the input number.
+ * Function = The last digit of the input number.
 */
 int print_last_digit(int num)
 {
