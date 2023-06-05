@@ -2,16 +2,8 @@
 #include "main.h"
 
 /**
- * Print_last_digit
- *
  * Returns the last digit of an input number.
- *
- * Parametersr - num: An integer number.
- *
- * Returns:
- *
- * Function = The last digit of the input number.
-*/
+ */
 int print_last_digit(int num)
 {
 	int last_digit = num % 10;
