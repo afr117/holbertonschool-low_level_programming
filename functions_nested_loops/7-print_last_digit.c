@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-/** Function: print_last_digit: Returns the last digit of an input number.
+/** Function: print_last_digit - Returns the last digit of an input number.
  *
  * Parameters r - @num: An integer number.
  *
