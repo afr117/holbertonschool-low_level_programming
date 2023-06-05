@@ -5,8 +5,11 @@
  * Function: print_last_digit
  *
  * Returns the last digit of an input number.
- * Parametersr - num: An integer number. 
+ *
+ * Parametersr - num: An integer number.
+ * 
  * Returns:
+ *
  * The last digit of the input number.
 */
 int print_last_digit(int num)
