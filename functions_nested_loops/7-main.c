@@ -1,16 +1,12 @@
 #include "main.h"
-/**
-* print_last_digit - print last digit
-* @n: number to be calculated
-* Return: returns 0.
-*/
-#include "main.h"
 
 /**
  * main - check the code
  *
  * Return: Always 0.
  */
+int print_last_digit(int num);
+
 int main(void)
 {
     int r;
