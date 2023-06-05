@@ -4,11 +4,21 @@
 * @n: number to be calculated
 * Return: returns 0.
 */
-int print_last_digit(int n)
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-	int lastdigit = n % 10;
-	if (lastdigit < 0)
-	lastdigit *= -1;
-	_putchar(lastdigit + '0');
-	return (lastdigit);
+    int r;
+
+    print_last_digit(98);
+    print_last_digit(0);
+    r = print_last_digit(-1024);
+    _putchar('0' + r);
+    _putchar('\n');
+    return (0);
 }
