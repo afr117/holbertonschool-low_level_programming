@@ -9,7 +9,8 @@
 int _putchar(char c);
 
 /**
- * _strcpy - Copies the string pointed to by src, including the terminating null byte, to the buffer pointed to by dest.
+ * _strcpy - Copies the string pointed to by src, including the terminating null byte,
+ *            to the buffer pointed to by dest.
  * @dest: Pointer to the destination buffer.
  * @src: Pointer to the source string.
  *
