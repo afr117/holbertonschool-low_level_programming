@@ -6,7 +6,7 @@
  * return: Allways 0.
  */
 void print_numbers(void)
-{	
+{
 char k;
 
 for (k = 0; k <= 9; k++)
