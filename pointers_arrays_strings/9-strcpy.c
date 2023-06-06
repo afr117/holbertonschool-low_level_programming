@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main.h" /* Header file */
 
 /**
  * _putchar - Writes a character to stdout.
@@ -9,7 +9,8 @@
 int _putchar(char c);
 
 /**
- * _strcpy - Copy string pointed to by src, including terminating null byte to buffer.
+ * _strcpy - Copy string pointed to by src, including
+ *           terminating null byte to buffer.
  * @dest: Pointer to the destination buffer.
  * @src: Pointer to the source string.
  *
