@@ -31,7 +31,6 @@ void print_rev(char *s)
 	}
 	_putchar('\n');
 }
-
 /**
  * _strlen - Returns the length of a string.
  * @s: Pointer to the string.
