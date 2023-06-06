@@ -5,7 +5,8 @@
  *
  * Return: Always 0
  */
-int main(void) {
+int main(void)
+{
 	int i;
 
 	for (i = 1; i <= 100; i++) {
@@ -23,5 +24,5 @@ int main(void) {
 	}
 
 	printf("\n");
-	return 0;
+	return (0);
 }
