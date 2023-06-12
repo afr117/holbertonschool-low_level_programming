@@ -5,7 +5,6 @@
 /**
  *
  */
-
 int main()
 {
 	char src[20] = "Hello ";
