@@ -7,7 +7,7 @@
  */
 int main()
 {
-	char src[20] = "Hello ";
+	char src[98] = "Hello ";
 	char dest[] = "World!";
 
 	strcat(src,dest);
