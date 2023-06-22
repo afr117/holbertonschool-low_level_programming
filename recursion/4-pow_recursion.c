@@ -11,7 +11,7 @@
 int _pow_recursion(int x, int y)
 {
 	if (y < 0) /* Base case: exponent is negative */
-		return -(1);
+		return (-1);
 	if (y == 0) /* Base case: exponent is 0 */
 		return (1);
 
