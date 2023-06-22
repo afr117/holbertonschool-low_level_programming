@@ -10,7 +10,7 @@
 int factorial(int n)
 {
 	if (n < 0) /* Base case: error condition */
-		return -1;
+		return (-1);
 	if (n == 0) /* Base case: factorial of 0 is 1 */
 		return (1);
 
