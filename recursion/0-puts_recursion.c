@@ -27,3 +27,4 @@ void _puts_recursion(char *s)
 	_putchar(*s); /* Print current character */
 	_puts_recursion(s + 1); /* Recursively print remaining characters */
 }
+
