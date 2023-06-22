@@ -8,7 +8,7 @@ int sqrt_helper(int n, int i); /* Function declaration for sqrt_helper */
  * Return: The natural square root of n, or -1 if it does not have a
  *         natural square root.
  */
-int _sqrt_recursion(int n)
+int _sqrt_recursion(int n) /* Function implementation */
 {
 	if (n < 0) /* Negative numbers don't have a natural square root */
 	return (-1);
