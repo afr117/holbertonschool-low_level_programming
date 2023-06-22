@@ -1,16 +1,6 @@
 #include "main.h"
-#include <unistd.h>
 
-/**
- * _putchar - Writes a character to stdout
- * @c: The character to be written
- *
- * Return: On success 1, -1 on error.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1) != 1 ? -1 : 1);
-}
+int _putchar(char c);
 
 /**
  * _puts_recursion - Prints a string, followed by a new line
@@ -27,4 +17,3 @@ void _puts_recursion(char *s)
 	_putchar(*s); /* Print current character */
 	_puts_recursion(s + 1); /* Recursively print remaining characters */
 }
-
