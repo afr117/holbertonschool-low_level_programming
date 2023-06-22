@@ -1,7 +1,5 @@
 #include "main.h"
 
-int _putchar(char c);
-
 /**
  * _print_rev_recursion - Prints a string in reverse
  * @s: The string to be printed
