@@ -30,4 +30,5 @@ int sqrt_helper(int n, int i)
 		return (-1);
 
 	return (sqrt_helper(n, i + 1)); /* Increment i and continue searching */
+	return (sqrt_helper(n, 0));
 }
