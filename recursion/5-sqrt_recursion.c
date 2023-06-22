@@ -1,7 +1,6 @@
 #include "main.h"
 
 int sqrt_helper(int n, int i); /* Function declaration for sqrt_helper */
-
 /**
  * _sqrt_recursion - Calculates the natural square root of a number.
  * @n: The number to calculate the square root of.
@@ -16,7 +15,6 @@ int _sqrt_recursion(int n)
 
 	return (sqrt_helper(n, 0)); /* Call helper function to calculate square root */
 }
-
 /**
  * sqrt_helper - Recursive helper function to calculate square root.
  * @n: The number to calculate the square root of.
