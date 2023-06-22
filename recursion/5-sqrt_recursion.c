@@ -12,9 +12,9 @@ int sqrt_helper(int n, int i); /* Function declaration for sqrt_helper */
 int _sqrt_recursion(int n)
 {
 	if (n < 0) /* Negative numbers don't have a natural square root */
-	return -1;
+	return (-1);
 
-	return sqrt_helper(n, 0); /* Call helper function to calculate square root */
+	return (sqrt_helper(n, 0)); /* Call helper function to calculate square root */
 }
 
 /**
@@ -27,9 +27,9 @@ int _sqrt_recursion(int n)
 int sqrt_helper(int n, int i)
 {
 	if (i * i == n) /* Found the square root */
-		return i;
+		return (i);
 	if (i * i > n) /* Overshot the square root, it doesn't exist */
-		return -1;
+		return (-1);
 
-	return sqrt_helper(n, i + 1); /* Increment i and continue searching */
+	return (sqrt_helper(n, i + 1)); /* Increment i and continue searching */
 }
