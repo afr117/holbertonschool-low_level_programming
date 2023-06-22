@@ -13,7 +13,7 @@ int _sqrt_recursion(int n)
 	if (n < 0) /* Negative numbers don't have a natural square root */
 	return (-1);
 
-	return (sqrt_helper(n, 0)); /* Call helper function to calculate square root */
+	return (sqrt_helper(n, 0)); /* Helper function, calculate square root */
 }
 /**
  * sqrt_helper - Recursive helper function to calculate square root.
