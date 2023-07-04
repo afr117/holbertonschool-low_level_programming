@@ -3,6 +3,9 @@
 
 #include <stdio.h>
 
+/**
+ * Struct definition for dog
+ */
 struct dog	/* Struct definition for dog */
 {
 	char *name;	/* Name of the dog */
