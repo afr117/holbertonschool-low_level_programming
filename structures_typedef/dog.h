@@ -5,8 +5,11 @@
 
 /*
  * Struct definition for dog
+ *
+ * This struct represents a dog with its name, age, and owner information.
  */
-struct dog {
+struct dog
+{
 	char *name;
 	float age;
 	char *owner;
