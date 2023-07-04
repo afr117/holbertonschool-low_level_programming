@@ -3,11 +3,8 @@
 
 #include <stdio.h>
 
-/*
- * Struct definition for dog
- *
- * This struct represents a dog with its name, age, and owner information.
- */
+/* Struct definition for dog */
+/* This struct represents a dog with its name, age, and owner information. */
 struct dog
 {
 	char *name;	/* Name of the dog */
