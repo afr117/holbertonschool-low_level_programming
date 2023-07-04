@@ -4,8 +4,8 @@
 #include <stdio.h>
 
 /* Struct definition for dog */
-/* This struct represents a dog with its name, age, and owner information. */
-struct dog	/* Contains dog data*/
+
+struct dog
 {
 	char *name;	/* Name of the dog */
 	float age;	/* Age of the dog */
