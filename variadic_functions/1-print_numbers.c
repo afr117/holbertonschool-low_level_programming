@@ -22,21 +22,18 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		int digits = 1;
 		int j;
 
-		/* Handle negative numbers */
 		if (num < 0)
 		{
 			putchar('-');
 			num = -num;
 		}
 
-		/* Count the number of digits */
 		while (temp / 10 != 0)
 		{
 			digits++;
 			temp /= 10;
 		}
 
-		/* Print the number */
 		for (j = 0; j < digits; j++)
 		{
 			int divisor = 1;
@@ -48,7 +45,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			putchar((num / divisor) % 10 + '0');
 		}
 
-		/* Print the separator */
 		if (separator != NULL && i < n - 1)
 			printf("%s", separator);
 	}
