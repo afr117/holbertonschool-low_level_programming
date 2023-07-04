@@ -41,6 +41,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			int divisor = 1;
 			int k;
+
 			for (k = 1; k < digits - j; k++)
 				divisor *= 10;
 
