@@ -1,23 +1,11 @@
 #include <stdio.h>
 #include "function_pointers.h"
 
-/**
- * print_name_as_is - prints a name as is
- * @name: name of the person
- *
- * Return: Nothing.
- */
 void print_name_as_is(char *name)
 {
     printf("Hello, my name is %s\n", name);
 }
 
-/**
- * print_name_uppercase - print a name in uppercase
- * @name: name of the person
- *
- * Return: Nothing.
- */
 void print_name_uppercase(char *name)
 {
     unsigned int i;
@@ -38,15 +26,9 @@ void print_name_uppercase(char *name)
     }
 }
 
-/**
- * print_name - prints a name using a function pointer
- * @name: name of the person
- * @f: function pointer to the desired printing function
- *
- * Return: Nothing.
- */
 void print_name(char *name, void (*f)(char *))
 {
     if (name != NULL && f != NULL)
         f(name);
 }
+
