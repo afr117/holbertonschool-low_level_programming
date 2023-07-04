@@ -8,14 +8,14 @@
  * @cmp: Pointer to the function used to compare values
  *
  * Description: This function takes an array, its size, and a function pointer
- * 		as arguments. It searches for an integer in the array by applying
- * 		the specified comparison function to each element.
- * 		It returns the index of the first element for which the cmp function
- * 		does not return 0. If no element matches, it returns -1.
- * 		If size <= 0, it also returns -1.
+ *		as arguments. It searches for an integer in the array by applying
+ *		the specified comparison function to each element.
+ *		It returns the index of the first element for which the cmp function
+ *		does not return 0. If no element matches, it returns -1.
+ *		If size <= 0, it also returns -1.
  *
  * Return: The index of the first matching element, or -1 if no match or
- * 		invalid parameters.
+ *	invalid parameters.
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
