@@ -3,18 +3,16 @@
 
 #include <stdio.h>
 
-/**
- * struct dog - Represents a dog with its name, age, and owner information.
- * @name: Name of the dog
- * @age: Age of the dog
- * @owner: Owner of the dog
- */
-
+/* Struct definition for dog */
 struct dog
 {
-	char *name;	/* Name of the dog */
-	float age;	/* Age of the dog */
-	char *owner;	/* Owner of the dog */
+        char *name;     /* Name of the dog */
+        float age;      /* Age of the dog */
+        char *owner;    /* Owner of the dog */
 };
 
+/* Function prototype for init_dog */
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
 #endif /* DOG_H */
+
