@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-struct dog	/*Struct definition for dog, represents a dog with its name, age, and owner information. */
+struct dog	/* Struct definition for dog, represents dog name, age, owner. */
 {
 	char *name;	/* Name of the dog */
 	float age;	/* Age of the dog */
