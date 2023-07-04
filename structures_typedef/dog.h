@@ -4,15 +4,15 @@
 #include <stdio.h>
 
 /**
- * @brief The struct representing a dog.
- *
- * This struct contains information about a dog, including its name, age, and owner.
+ * @struct dog
+ * @brief Represents a dog with its name, age, and owner information.
  */
 struct dog
 {
-    char *name;     /**< The name of the dog. */
-    float age;      /**< The age of the dog. */
-    char *owner;    /**< The owner of the dog. */
+    char *name;     /**< Name of the dog */
+    float age;      /**< Age of the dog */
+    char *owner;    /**< Owner of the dog */
 };
 
 #endif /* DOG_H */
+
