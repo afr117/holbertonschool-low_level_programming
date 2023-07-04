@@ -11,6 +11,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
  */
 int main(void)
 {
+
 struct dog my_dog;
 
 	init_dog(&my_dog, "Ghost", 4.75, "Jon Snow");
