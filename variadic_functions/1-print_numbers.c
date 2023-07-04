@@ -10,50 +10,50 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-    va_list args;
-    unsigned int i;
+	va_list args;
+	unsigned int i;
 
-    va_start(args, n);
+	va_start(args, n);
 
-    for (i = 0; i < n; i++)
-    {
-        int num = va_arg(args, int);
-        int temp = num;
-        int digits = 1;
-        int j;
+	for (i = 0; i < n; i++)
+	{
+		int num = va_arg(args, int);
+		int temp = num;
+		int digits = 1;
+		int j;
 
-        /* Handle negative numbers */
-        if (num < 0)
-        {
-            putchar('-');
-            num = -num;
-        }
+		/* Handle negative numbers */
+		if (num < 0)
+		{
+			putchar('-');
+			num = -num;
+		}
 
-        /* Count the number of digits */
-        while (temp / 10 != 0)
-        {
-            digits++;
-            temp /= 10;
-        }
+		/* Count the number of digits */
+		while (temp / 10 != 0)
+		{
+			digits++;
+			temp /= 10;
+		}
 
-        /* Print the number */
-        for (j = 0; j < digits; j++)
-        {
-            int divisor = 1;
-            int k;
-            for (k = 1; k < digits - j; k++)
-                divisor *= 10;
+		/* Print the number */
+		for (j = 0; j < digits; j++)
+		{
+			int divisor = 1;
+			int k;
+			for (k = 1; k < digits - j; k++)
+				divisor *= 10;
 
-            putchar((num / divisor) % 10 + '0');
-        }
+			putchar((num / divisor) % 10 + '0');
+		}
 
-        /* Print the separator */
-        if (separator != NULL && i < n - 1)
-            printf("%s", separator);
-    }
+		/* Print the separator */
+		if (separator != NULL && i < n - 1)
+			printf("%s", separator);
+	}
 
-    va_end(args);
+	va_end(args);
 
-    putchar('\n');
+	putchar('\n');
 }
 
