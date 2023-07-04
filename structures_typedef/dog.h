@@ -3,9 +3,12 @@
 
 #include <stdio.h>
 
-/*
- * Struct definition for dog
- * Represents information about a dog, including its name, age, and owner.
+/**
+ * init_dog - Initializes a struct dog with the provided values.
+ * @d: Pointer to the struct dog to initialize.
+ * @name: Name of the dog.
+ * @age: Age of the dog.
+ * @owner: Owner of the dog.
  */
 struct dog
 {
