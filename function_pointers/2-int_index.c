@@ -13,6 +13,9 @@
  * 		It returns the index of the first element for which the cmp function
  * 		does not return 0. If no element matches, it returns -1.
  * 		If size <= 0, it also returns -1.
+ *
+ * Return: The index of the first matching element, or -1 if no match or
+ * 		invalid parameters.
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
