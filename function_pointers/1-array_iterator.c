@@ -12,14 +12,13 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-    size_t i;
+	size_t i;
 
-    if (array && action) /* Check if array and action are not NULL */
-    {
-        for (i = 0; i < size; i++)
-        {
-            action(array[i]); /* Call the function on each element */
-        }
-    }
+	if (array && action) /* Check if array and action are not NULL */
+{
+	for (i = 0; i < size; i++)
+{
+	action(array[i]); /* Call the function on each element */
 }
-
+}
+}
