@@ -13,9 +13,9 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-    int fd;
+    int fd, stdout_copy;
     ssize_t n;
-    char buffer[1];
+    char *buffer;
 
     if (filename == NULL)
         return (0);
@@ -24,23 +24,57 @@ ssize_t read_textfile(const char *filename, size_t letters)
     if (fd == -1)
         return (0);
 
-    n = read(fd, buffer, 1);
-    while (n > 0 && letters > 0)
+    buffer = malloc(sizeof(char) * (letters + 1));
+    if (buffer == NULL)
     {
-        if (write(STDOUT_FILENO, buffer, 1) == -1)
-        {
-            close(fd);
-            return (0);
-        }
-        n = read(fd, buffer, 1);
-        letters--;
+        close(fd);
+        return (0);
+    }
+
+    n = read(fd, buffer, letters);
+    if (n == -1)
+    {
+        free(buffer);
+        close(fd);
+        return (0);
+    }
+
+    stdout_copy = dup(STDOUT_FILENO);
+    if (stdout_copy == -1)
+    {
+        free(buffer);
+        close(fd);
+        return (0);
+    }
+
+    if (dup2(STDERR_FILENO, STDOUT_FILENO) == -1)
+    {
+        free(buffer);
+        close(fd);
+        close(stdout_copy);
+        return (0);
+    }
+
+    if (write(STDOUT_FILENO, buffer, n) == -1)
+    {
+        free(buffer);
+        close(fd);
+        close(stdout_copy);
+        return (0);
+    }
+
+    if (dup2(stdout_copy, STDOUT_FILENO) == -1)
+    {
+        free(buffer);
+        close(fd);
+        close(stdout_copy);
+        return (0);
     }
 
     close(fd);
+    close(stdout_copy);
+    free(buffer);
 
-    if (n == -1 || letters > 0)
-        return (0);
-
-    return (letters);
+    return (n);
 }
 
