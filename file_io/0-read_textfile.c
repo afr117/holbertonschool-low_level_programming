@@ -14,7 +14,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
     int fd, stdout_copy;
-    ssize_t n;
+    size_t n, total = 0;
     char *buffer;
 
     if (filename == NULL)
@@ -31,50 +31,50 @@ ssize_t read_textfile(const char *filename, size_t letters)
         return (0);
     }
 
-    n = read(fd, buffer, letters);
-    if (n == -1)
+    while ((n = read(fd, buffer, letters)) > 0)
     {
-        free(buffer);
-        close(fd);
-        return (0);
-    }
+        total += n;
 
-    stdout_copy = dup(STDOUT_FILENO);
-    if (stdout_copy == -1)
-    {
-        free(buffer);
-        close(fd);
-        return (0);
-    }
+        stdout_copy = dup(STDOUT_FILENO);
+        if (stdout_copy == -1)
+        {
+            free(buffer);
+            close(fd);
+            return (0);
+        }
 
-    if (dup2(STDERR_FILENO, STDOUT_FILENO) == -1)
-    {
-        free(buffer);
-        close(fd);
-        close(stdout_copy);
-        return (0);
-    }
+        if (dup2(STDERR_FILENO, STDOUT_FILENO) == -1)
+        {
+            free(buffer);
+            close(fd);
+            close(stdout_copy);
+            return (0);
+        }
 
-    if (write(STDOUT_FILENO, buffer, n) == -1)
-    {
-        free(buffer);
-        close(fd);
-        close(stdout_copy);
-        return (0);
-    }
+        if (write(STDOUT_FILENO, buffer, n) != (ssize_t)n)
+        {
+            free(buffer);
+            close(fd);
+            close(stdout_copy);
+            return (0);
+        }
 
-    if (dup2(stdout_copy, STDOUT_FILENO) == -1)
-    {
-        free(buffer);
-        close(fd);
-        close(stdout_copy);
-        return (0);
+        if (dup2(stdout_copy, STDOUT_FILENO) == -1)
+        {
+            free(buffer);
+            close(fd);
+            close(stdout_copy);
+            return (0);
+        }
+
+        if (n < letters)
+            break;
     }
 
     close(fd);
     close(stdout_copy);
     free(buffer);
 
-    return (n);
+    return (total);
 }
 
