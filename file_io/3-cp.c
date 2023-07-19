@@ -46,11 +46,19 @@ int main(int argc, char *argv[])
     {
         bytes_written = write(fd_to, buffer, bytes_read);
         if (bytes_written == -1 || bytes_written != bytes_read)
+        {
+            close(fd_from);
+            close(fd_to);
             error_exit("Error: Can't write to file", 99);
+        }
     }
 
     if (bytes_read == -1)
+    {
+        close(fd_from);
+        close(fd_to);
         error_exit("Error: Can't read from file", 98);
+    }
 
     /* Close file descriptors */
     res = close(fd_from);
@@ -61,6 +69,6 @@ int main(int argc, char *argv[])
     if (res == -1)
         error_exit("Error: Can't close fd", 100);
 
-    return (0);
+    return 0;
 }
 
