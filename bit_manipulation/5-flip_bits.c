@@ -17,5 +17,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		count += (diff & 1);
 		diff >>= 1;
 	}
+
 	return (count);
 }
+
