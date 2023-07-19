@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     if (fd_from == -1)
         error_exit("Error: Can't read from file", 98);
 
-    /* Open or create the destination file for writing */
+    /* Open the destination file for writing */
     fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
     if (fd_to == -1)
     {
