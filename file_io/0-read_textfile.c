@@ -26,14 +26,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
     while ((n = read(fd, buffer, letters)) > 0)
     {
-        if (write(STDOUT_FILENO, buffer, n) != n)
+        ssize_t written = 0;
+        while (written < n)
         {
-            free(buffer);
-            close(fd);
-            return (0);
+            ssize_t result = write(STDOUT_FILENO, buffer + written, n - written);
+            if (result == -1)
+            {
+                free(buffer);
+                close(fd);
+                return (0);
+            }
+            written += result;
         }
-
-        total += n;
+        total += written;
     }
 
     close(fd);
