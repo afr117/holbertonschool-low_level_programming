@@ -13,10 +13,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd_from;
-	int fd_to;
-	ssize_t bytes_read;
-	ssize_t bytes_written;
+	int fd_from, fd_to;
+	ssize_t bytes_read, bytes_written;
 	char buffer[1024];
 
 	if (argc != 3)
