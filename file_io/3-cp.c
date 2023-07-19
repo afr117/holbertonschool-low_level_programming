@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 		error_exit("Error: Can't read from file", 98);
 
 	/* Open or create the destination file for writing */
-	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fd_to == -1)
 		error_exit("Error: Can't write to file", 99);
 
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 	while ((bytes_read = read(fd_from, buffer, sizeof(buffer))) > 0)
 	{
 		bytes_written = write(fd_to, buffer, bytes_read);
-		if (bytes_written != bytes_read)
+		if (bytes_written == -1 || bytes_written != bytes_read)
 			error_exit("Error: Can't write to file", 99);
 	}
 
