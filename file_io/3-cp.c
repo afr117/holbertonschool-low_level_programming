@@ -54,7 +54,9 @@ void validate_arguments(int argc)
  */
 int open_file_from(const char *file_from)
 {
-    int fd_from = open(file_from, O_RDONLY);
+    int fd_from;
+
+    fd_from = open(file_from, O_RDONLY);
     if (fd_from == -1)
     {
         dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
@@ -72,7 +74,9 @@ int open_file_from(const char *file_from)
  */
 int open_file_to(const char *file_to)
 {
-    int fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+    int fd_to;
+
+    fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
     if (fd_to == -1)
     {
         dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
@@ -116,13 +120,17 @@ void copy_content(int fd_from, int fd_to)
  */
 void close_files(int fd_from, int fd_to)
 {
-    if (close(fd_from) == -1)
+    int res;
+
+    res = close(fd_from);
+    if (res == -1)
     {
         dprintf(STDERR_FILENO, "Error: Can't close source file\n");
         exit(100);
     }
 
-    if (close(fd_to) == -1)
+    res = close(fd_to);
+    if (res == -1)
     {
         dprintf(STDERR_FILENO, "Error: Can't close destination file\n");
         exit(100);
