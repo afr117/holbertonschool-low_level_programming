@@ -39,7 +39,10 @@ int main(int argc, char *argv[])
     /* Open or create the destination file for writing */
     fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
     if (fd_to == -1)
+    {
+        close(fd_from);
         error_exit("Error: Can't write to file", 99);
+    }
 
     /* Copy the content from source file to destination file */
     while ((bytes_read = read(fd_from, buffer, sizeof(buffer))) > 0)
