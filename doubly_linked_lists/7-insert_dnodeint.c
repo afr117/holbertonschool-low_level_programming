@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * insert_dnodeint_at_index - Inserts a new node at a given position in a dlistint_t list.
+ * insert_dnodeint_at_index - Insert new node position in dlistint_t list.
  * @h: Pointer to a pointer to the head of the list.
  * @idx: The index where the new node should be added (index starts at 0).
  * @n: The value to be stored in the new node.
