@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+"""
+File: 2-O
+Question: What is the time complexity (worst case) of a linear search in an array of size n?
+"""
+print("O(n)")
