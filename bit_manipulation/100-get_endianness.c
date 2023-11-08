@@ -7,9 +7,9 @@
  */
 int get_endianness(void)
 {
-    unsigned int x = 1;
-    char *c = (char *)&x;
+	unsigned int x = 1;
+	char *c = (char *)&x;
 
     /* If the first byte (lowest address) is 1, it's little-endian. */
-    return (*c);
+	return (*c);
 }
